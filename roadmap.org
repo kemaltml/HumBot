@@ -1,0 +1,45 @@
+#+title: Roadmap
+#+STURTUP: showeverything
+
+* TODO Milestone 0 - Development Environment
+- [ ] Validate Ubuntu 24.04 and ROS 2 Jazzy installation
+- [ ] Validate Gazebo Harmonic and ROS-Gazebo integration.
+- [ ] Validate ~colcon~, ~rosdep~, ~xacro~ and Rviz installation
+- [ ] Create Git repo and decide the branch system for development
+- [ ] Create .gitignore and make sure it has ~build/~, ~install/~, ~log/~ in it
+- [ ] Create a list of old packages dependencies
+
+* TODO Milestone 1 - Description Package [0/3]
+- [ ] Create description package
+  - [ ] Start with base and its components
+  - [ ] Create ~main.xacro~
+  - [ ] Create ~base.xacro~ - base, wheels
+  - [ ] Create ~leg.xacro~ - leg
+  - [ ] Create ~body.xacro~ - upper body
+  - [ ] Create ~head.xacro~ - head
+  - [ ] Create ~arms.xacro~ - shoulders, upper arms, elbows, lower arms
+  - [ ] Create ~hands.xacro~ - hands, fingers
+  - [ ] Create ~sensors.xacro~ - lidar, depth cam, head cam
+> Make arms fixed for now
+
+- [ ] Write drivers
+  - [ ] Lidar description -> ~sensors.xacro~
+  - [ ] set lidar range: angle limits and max distance
+  - [ ] Depth Cam description -> ~sensors.xacro~
+  - [ ] Head Cam description -> ~sensors.xacro~
+  - [ ] Make research about driving robot. Is ~diff_drive~ enough or shuld use other drivers
+  - [ ] Create ~drive.xacro~ to movement driver description
+
+- [ ] Test the system
+  - [ ] is lidar working
+    - [ ] is angle is true
+    - [ ] is max distance is true
+    - [ ] is publishing data
+  - [ ] is depth camera working
+    - [ ] is RGB frame true
+    - [ ] is Depth frame true
+    - [ ] is picture frame true
+    - [ ] is pictures publishing
+  - [ ] is drive is working properly
+
+
